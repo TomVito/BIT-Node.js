@@ -4,7 +4,7 @@ const fs=require('fs');
 const path=require('path');
 
 function generateCurrencySelect(cs, name){
-    let s='<select class="form-control" name="'+name+'">';
+    let s='<select class="form-control select2" name="'+name+'">';
     cs.forEach((d)=>{
         s+="<option value='"+d.code+"'>"+"("+d.code+") "+d.name+"</option>";
     })
@@ -44,6 +44,16 @@ const server=http.createServer((req,res)=>{
                 stream=stream.replace('{{currencies2}}', generateCurrencySelect(cs, 'to'));
                 stream=stream.replace('{{currency}}', from+" to "+to);
                 stream=stream.replace('{{rates}}', s);
+
+                const chartData=[];
+                rates.forEach((d)=>{
+                    chartData.push({
+                        x:d.date.slice(5, 10),
+                        y:d.rate
+                    });
+                });
+                stream=stream.replace('RatesData', JSON.stringify(chartData));
+
                 res.write(stream);
                 res.end();
             });

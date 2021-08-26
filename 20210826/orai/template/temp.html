@@ -84,12 +84,14 @@
       const duomenys = {
         datasets: [{
             label:"Temperatura",
-            data:[{x:'2016-12-25', y:20}, {x:'2016-12-26', y:10}]
+            data:TemperaturuDuomenys,
+            tension: 0.4,
+            backgroundColor: '#cc65fe'
           }]
       };
 
       const config = {
-        type: "line",
+        type: "bar",
         data: duomenys,
         options: {},
       };
