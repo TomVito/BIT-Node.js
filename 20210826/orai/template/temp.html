@@ -81,8 +81,20 @@
         $(".select2").select2();
       });
 
-      var grafikas=new Chart();
+      const duomenys = {
+        datasets: [{
+            label:"Temperatura",
+            data:[{x:'2016-12-25', y:20}, {x:'2016-12-26', y:10}]
+          }]
+      };
 
+      const config = {
+        type: "line",
+        data: duomenys,
+        options: {},
+      };
+
+      var grafikas = new Chart(document.getElementById("tempChart"), config);
     </script>
   </body>
 </html>
