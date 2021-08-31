@@ -14,9 +14,14 @@ app.get('/users',(req, res, next)=>{
 });
 
 app.post('/add_user',(req, res, next)=>{
-    console.log(req.body);
+    console.log(req.body.vardas);
+    console.log(req.body.pavarde);
     res.send("<h1>Pridėti vartotoją</h1>"+"<br>Vardas: "+req.body.vardas+"<br>Pavarde: "+req.body.pavarde);
 });
+
+app.get('/add_user',(req, res, next)=>{
+    res.redirect('/users');
+})
 
 app.use('/',(req, res, next)=>{
     res.send("<h1>Pagrindinis puslapis</h1>");
