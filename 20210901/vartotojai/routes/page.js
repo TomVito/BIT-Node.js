@@ -14,7 +14,9 @@ router.get('/',(req,res,next)=>{
  router.use('/', (req,res, next)=>{
    //Išsiunčiame failą 404.html
    //status - nustato statusą
+   //res.status(404).sendFile(path.join(__dirname,'..','views','404.html'));
    res.status(404).render('404');
+
    //res.status(404).send("Puslapis nerastas");
    //res.status(404).send("<script>alert('Puslapis nerastas'); history.go(-1);</script>");
 
