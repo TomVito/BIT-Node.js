@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Dienos sriuba",
+        "price": "2.75"
+    },
+    {
+        "name": "Cibulynė",
+        "price": "3.90"
+    },
+    {
+        "name": "Šaltibarščiai",
+        "price": "4.30"
+    },
+    {
+        "name": "Silkė su bulvėmis",
+        "price": "5.90"
+    },
+    {
+        "name": "Silkė su daržovėmis",
+        "price": "4.50"
+    },
+    {
+        "name": "Cepelinai su mėsa",
+        "price": "6.30"
+    },
+    {
+        "name": "Naminis kotletas",
+        "price": "5.90"
+    },
+    {
+        "name": "Obuolių Pyragas",
+        "price": "3.10"
+    },
+    {
+        "name": "Kompotas",
+        "price": "0.70"
+    }
+]
