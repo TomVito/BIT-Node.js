@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+    {{>nav}}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <table class="table priceTable">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each prices}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>from {{price}}</td>
+                        </tr>
+                        {{~/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+    {{>nav}}
+    <div class="container">
+      <div class="row justify-content-center register-table">
+                    <div class="col-lg-6 col-xl-6">
+                        <form method="POST" action="/register">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="model" id="model" type="text" data-sb-validations="required" />
+                                <label for="model">Model</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="make" id="make" type="text" data-sb-validations="required" />
+                                <label for="make">Make</label>
+                            </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control" name="productionYear" id="productionYear" type="text" data-sb-validations="required" />
+                                <label for="productionYear">Production year</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="preferredDate" id="preferredDate" type="date" data-sb-validations="required" />
+                                <label for="preferredDate">Preferred date</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="yourNumber" id="yourNumber" type="phone" data-sb-validations="required" />
+                                <label for="yourNumber">Your number</label>
+                            </div>
+                             </div>
+                              <div class="col-lg-6 col-xl-6">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" name="problem" id="problem" type="text" style="height: 18rem" data-sb-validations="required"></textarea>
+                                <label for="problem">Tell us about your problem</label>
+                            </div>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Register</button>
+                            </div>
+                        </form>
+                   
+                </div>
+                </div>
+    {{>footer}}
+</body>
+</html>

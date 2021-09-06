@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Engine repair",
+        "price":"200€"
+    },
+    {
+        "name": "Clutch",
+        "price":"250€"
+    },
+    {
+        "name": "Timing belts",
+        "price": "180€"
+    },
+    {
+        "name": "Mechanical Transmission",
+        "price": "60€"
+    },
+    {
+        "name": "Automatic Transmission",
+        "price": "100€" 
+    },
+    {
+        "name": "Suspension",
+        "price": "100€" 
+    },
+    {
+        "name": "Oil change",
+        "price": "15€"
+    },
+    {
+        "name": "Brake Pad",
+        "price": "75€"
+    },
+    {
+        "name": "Wheel repair",
+        "price": "5€"
+    },
+    {
+        "name": "Tire change",
+        "price": "3€"
+    }
+]

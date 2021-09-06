@@ -33,6 +33,4 @@ router.get('/kontaktai', (req, res, next)=>{
     res.render('contacts');
 });
 
-
-
 module.exports=router;

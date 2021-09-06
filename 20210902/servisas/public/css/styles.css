@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar {
+    background-color: rgb(194, 61, 61);
+}
+
+.nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.priceTable {
+    margin-top: 200px;
+    color: white;
+}
+
+.workshop-img {
+    margin-top: 200px;
+}
+
+.register-table {
+    padding-top: 200px;
+}
+
+.contacts-text {
+    padding-top: 200px;
+    color: white;
+}
+
+.contacts-text-secondary {
+    color: white;
+}
+
+.registration {
+    color: white;
+}
