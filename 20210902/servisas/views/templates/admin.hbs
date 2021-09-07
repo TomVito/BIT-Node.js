@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+    {{>nav}}
+         <div class="container">
+            <div class="row justify-content-center reglist">
+                    <div class="col-lg-8 col-xl-7">
+                        {{#each register}}
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">{{model}}</h5>
+                                <p class="card-title">{{make}}</p>
+                                <p class="card-title">{{productionYear}}</p>
+                                <p class="card-title">{{preferredDate}}</p>
+                                <p class="card-title">{{yourNumber}}</p>
+                                <p class="card-title">{{problem}}</p>
+                            </div>
+                        </div>
+                        {{~/each}} 
+                    </div>
+            </div>  
+    </div>  
+    {{>footer}}
+</body>
+</html>

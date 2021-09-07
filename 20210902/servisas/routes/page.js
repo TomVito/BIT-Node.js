@@ -25,16 +25,16 @@ router.post('/register', (req, res, next)=>{
     res.redirect('/register');
 });
 
-router.get('/contacts', (req, res, next)=>{
-    res.render('contacts');
+router.get('/admin', (req, res, next)=>{
+    const registerList=register.getRegistration();
+    res.render('admin',{
+        title : 'Registrations List',
+        register: registerList
+    });      
 });
 
-router.get('/admin', (req, res, next)=>{
-    const registration=register.getRegistration();
-    res.render('admin',{
-        title: 'Registrations',
-        register: registration
-    });
+router.get('/contacts', (req, res, next)=>{
+    res.render('contacts');
 });
 
 module.exports=router;
