@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  {{>head}}
+  <body>
+    {{>nav}}
+    <main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Task List</h5>
+                    <table class="table">
+                        <tr>
+                            <th>Task:</th>
+                            <th>Status:</th>
+                            <th>Priority:</th>
+                        </tr>
+                        {{#each tasks}}
+                        <tr>
+                            <td>{{text}}</td>
+                            <td>{{status}}</td>
+                            <td>{{priority}}</td>
+                            <td>
+                                <a href="/edit?id={{_id}}" class="btn btn-success">Edit</a>
+                                <a href="/delete?id={{_id}}" class="btn btn-danger">Delete</a>
+                            </td>
+                             {{~/each}}
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+     {{>foot}}   
+  </body>
+</html>

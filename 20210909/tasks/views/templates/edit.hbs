@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  {{>head}}
+  <body>
+    {{>nav}}
+    <main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Create new task</h5>
+                    <form method="POST" action="/edit?={{tasks._id}}">
+                        <div class="mb-3">
+                            <label class="form-label">Task:</label>
+                            <input type="textarea" name="text" class="form-control" value="{{tasks.text}}">
+                        </div>
+                          <div class="mb-3">
+                            <label class="form-label">Status:</label>
+                            <select class="form-control" name="status" value="{{tasks.status}}">
+                                <option value="Planed">Planed</option>
+                                <option value="Underway">Underway</option>
+                                <option value="Delayed">Delayed</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Priority:</label><br>
+                            <input type="radio" name="priority" value="{{tasks.priority}}">
+                            <label for="normal">Normal</label>
+                            <input type="radio" name="priority" value="{{tasks.priority}}">
+                            <label for="urgent">Important</label>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-success" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+     {{>foot}}   
+  </body>
+</html>
