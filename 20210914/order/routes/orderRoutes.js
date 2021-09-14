@@ -13,10 +13,8 @@ router.get('/orders',(req,res,next)=>{
 });
 
 router.get('/orders/services/:id',(req,res,next)=>{
-   Order.find({service_id:'6140db6af28a75d60875abb0'}).then((orders)=>{
-       if (!orders){
-           return res.status(404).send();
-       }
+   const id=req.params.id;
+   Order.find({service_id:id}).then((orders)=>{
        res.send(orders);
    }).catch((e)=>{
        res.status(500).send(e);
