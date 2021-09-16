@@ -1,6 +1,7 @@
 const express=require('express');
 const router=express.Router();
-const Service=require('../models/service');
+const Service=require('./../models/service');
+const auth=require('./../middleware/auth');
 
 router.get('/services', (req,res,next)=>{
    Service.find({}).then((services)=>{
@@ -22,7 +23,7 @@ router.get('/services/:id', (req,res,next)=>{
    });
 });
 
-router.post('/services', (req,res,next)=>{
+router.post('/services', auth, (req,res,next)=>{
    const service=new Service(req.body);
    service.save().then(()=>{
        res.status(201).send(service);
@@ -31,7 +32,7 @@ router.post('/services', (req,res,next)=>{
    });
 });
 
-router.patch('/services/:id', async (req,res,next)=>{
+router.patch('/services/:id', auth, async (req,res,next)=>{
     try {
         const service=await Service.findById(req.params.id);
         const updates=Object.keys(req.body);
@@ -51,7 +52,7 @@ router.patch('/services/:id', async (req,res,next)=>{
     }
 });
 
-router.delete('/services/:id', async (req,res,next)=>{
+router.delete('/services/:id', auth, async (req,res,next)=>{
     try {
         const service=await Service.findByIdAndDelete(req.params.id);
         if (!service){
